@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a id="link">Link </a> 
+    <div class="test">test</div>
+    <div class="test">test</div>
+    <div class="test">test</div> 
+
+    <span>Span</span>
+</body>
+<script>
+    window.onload = function (e) {
+        var link = document.getElementById('link');
+        console.log(link);
+
+        var myDivList = document.getElementsByClassName('test')
+        console.log(myDivList)
+
+        var span = document.getElementsByTagName('span')
+        console.log(span)
+    }
+</script>
+
+</html>

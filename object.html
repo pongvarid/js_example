@@ -1,0 +1,28 @@
+<script>
+    window.onload = function (e) {
+
+        var obj = {};
+        obj[1] = 10;
+        console.log(obj);
+
+
+        //key เป็น string ก็ได้
+        obj['val'] = 20;
+        console.log("obj['val']",obj);
+
+        //หรือใช้ . ในการเข้าถึง
+        obj.val = 20;
+        console.log('obj.val',obj);
+
+
+        //หรือประกาศตั้งแต่แรก
+        obj = {
+            1: 10,
+            val: 20
+        };
+        console.log(obj);
+
+
+    }
+
+</script>

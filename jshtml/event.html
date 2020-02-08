@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="load()">
+    <h1>Event Example</h1>
+    <h2>onchange</h2>
+    <input type="text" onchange="getChange()" id="change" placeholder="Onchange example">
+    <hr>
+
+    <h2>oninput</h2>
+    <h3>Vale of input : <span id="input-value"></span></h3>
+    <input type="text" oninput="getInput()" id="input" placeholder="Onchange example">
+    <hr>
+
+    <h2>onclick</h2>
+    <input type="text" id="click" placeholder="Onchange example">
+    <button onclick="getClick()">Click Me</button>
+    <hr>
+
+    <h2>onmouseover</h2>
+    <div onmouseover="getMouseover()"
+        style="width:240px; height:60px; padding:10px; background:rebeccapurple; color:white;">
+        mouse over me
+    </div>
+    <hr>
+
+    <h2>onmouseout</h2>
+    <div onmouseout="getMouseout()" style="width:240px; height:60px; padding:10px; background:green; color:white;">
+        mouse out me
+    </div>
+    <hr>
+
+    <h2>onkeydown</h2>
+    <input type="text" onkeydown="getKeydown()" placeholder="Onchange example">
+    <hr>
+
+    <h2>onsubmit</h2>
+    <h4 id="form-value"></h4>
+        <form onsubmit="formSubmit()" action="#" >
+            <input type="text" id="name" required placeholder="Name" >
+            <input type="submit">
+        </form>
+    <hr>
+
+
+</body>
+<script>
+
+    function getChange() {
+        var val = document.getElementById('change').value;
+        alert(val)
+    }
+
+    function getClick() {
+        var val = document.getElementById('click').value;
+        alert(val)
+    }
+
+    function getMouseover() {
+        alert("Hello Mouse Over")
+
+    }
+
+    function getMouseout() {
+        alert("Hello Mouse Out")
+    }
+
+    function getInput() {
+        var input = document.getElementById('input').value;
+        document.getElementById('input-value').innerHTML = input; 
+    }
+
+    function getKeydown() {
+        alert('Key Down')
+    }
+
+    function load() { 
+        alert('Hello This is event example. i am onload')
+    }
+
+    function formSubmit(){
+        var val_input = document.getElementById('name').value; 
+        var val = document.getElementById('form-value').innerHTML =  val_input
+        alert('SUbmit');
+    }
+
+</script>
+
+</html>
+ 

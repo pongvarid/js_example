@@ -1,0 +1,34 @@
+<script>
+    window.onload = function (e) {
+
+
+        function plus(x, y) {
+            return x + y;
+        }
+
+        var sum = plus(1, 2);
+        console.log(sum);
+
+        function noop() {
+            //do nothing
+        }
+
+        var x = noop(); // undefined
+        console.log(x);
+
+
+
+        //ที่สำคัญคือ function ในภาษานี้เป็น type ที่อยู่ในระดับ "first-class" หรือประชาชนชั้นหนึ่ง
+        function minus(x, y) {
+            return x - y;
+        }
+
+        console.log('minus', minus(10, 4));
+
+
+        var op = minus;
+        console.log('op', op(10, 4));
+
+    }
+
+</script>
